@@ -1,0 +1,16 @@
+dependencies {
+    compile 'com.google.android.gms:play-services-gcm:9.4.0'
+    compile 'com.google.android.gms:play-services-ads:9.4.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'org.slf4j:slf4j-api:1.7.13'
+}
+
+
+
+Gimbal2.initialize('f640b178-9bcb-44e1-b3c9-d347c4c080cc');
+
+    Gimbal2.startBeaconManager();
+    console.log('beaconManager started');
+    angular.element($window).on('beaconsighting', function(data){
+        console.log('Beaconsighting: ', data);
+      });
