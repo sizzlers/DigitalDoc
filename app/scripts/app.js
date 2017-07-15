@@ -20,6 +20,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
+
+    Gimbal2.initialize('f640b178-9bcb-44e1-b3c9-d347c4c080cc');
+
+        Gimbal2.startBeaconManager();
+        console.log('beaconManager started');
+        angular.element($window).on('beaconsighting', function(data){
+            console.log('Beaconsighting: ', data);
+          });
   });
 })
 
@@ -74,6 +82,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/dashboard',
     templateUrl: 'templates/dashboard.html',
     controller : 'DashboardController',
+
+  })
+  .state('locator', {
+    url: '/locator',
+    templateUrl: 'templates/locator.html',
+    controller : 'LocatorController',
 
   });
 
