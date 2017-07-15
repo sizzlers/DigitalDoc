@@ -22,7 +22,7 @@ Gimbal2.initialize('f640b178-9bcb-44e1-b3c9-d347c4c080cc');
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
  <script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
-    <script src="styles/js/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
 
 
 
@@ -32,7 +32,7 @@ Gimbal2.initialize('f640b178-9bcb-44e1-b3c9-d347c4c080cc');
 <input type="text"  ng-model="txt2"><br>
 
 <br>
-sum {{sum}}
+
 {{data}}
  <button ng-click="AddNumbers()">hello</button>
   <button ng-click="save()">Save</button>
@@ -42,47 +42,55 @@ sum {{sum}}
 
 <script>
 var app = angular.module('myApp', [ 'ngStorage']);
+
 app.controller('myCtrl', function($scope,storageService) {
-      
+
+	  
      $scope.AddNumbers = function() {
             var a = Number($scope.txt1 || 0);
             var b = Number($scope.txt2 || 0);
             $scope.sum = a+b;
         }
 		
-		$scope.saved = localStorage.getItem('locator');
-		$scope.locator = (localStorage.getItem('locator')!==null) ? JSON.parse($scope.saved) : [ {text: 'test', visited: false}];
+		$scope.saved = storageService.get('locator');
+		$scope.locator = (storageService.get('locator')!==null) ? JSON.parse($scope.saved) : [ {text: 'test', visited: false}];
 		storageService.set('locator', JSON.stringify($scope.locator));
 		
 		$scope.save = function() {
 		
 		var locArr = $scope.locator;
-		angular.forEach(locArr, function(data){
-				if(locArr.indexOf(data.text) !== $scope.txt1){
-					$scope.locator.push({
+
+			var blnStatus = false;
+		angular.forEach(locArr, function(data)
+		{
+				if(data.text === $scope.txt1){
+					   blnStatus = true;
+					   
+				}
+		});
+
+				if(!blnStatus)
+				{
+						$scope.locator.push({
 						text: $scope.txt1,
 						visited: true
 						});
 				}
-			});
+		
 				
 		
 		storageService.set('locator', JSON.stringify($scope.locator));
-            
-			var a = $scope.txt1
-            var b ="";
-            storageService.set('1', a);
 
         }
 		$scope.retrieve = function() {
-        
-			//$scope.data = storageService.get('1')
-		
-			var count = 0;
+
+
+			var count = "";
 			angular.forEach($scope.locator, function(data){
 				count+= data.text ;//? 0 : 1;
 			});
 			$scope.data = count;
+
 	
 
         }
