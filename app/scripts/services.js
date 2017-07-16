@@ -1,6 +1,6 @@
-angular.module('starter.services', [])
+angular.module('starter.services', ['ngLodash'])
 
-.factory('BeaconManagerService', function() {
+.factory('BeaconManagerService', function(lodash) {
 
 
   function storeVisitedBeacons(data1){
