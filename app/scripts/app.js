@@ -7,7 +7,7 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ngLodash'])
 
-.run(function($ionicPlatform, $window) {
+.run(function($ionicPlatform, $window, BeaconManagerService) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -27,6 +27,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
         console.log('beaconManager started');
         angular.element($window).on('beaconsighting', function(data){
             console.log('Beaconsighting: ', data);
+            BeaconManagerService.storeVisitedBeacons(data);
       });
   });
 })
