@@ -22,7 +22,7 @@ Gimbal2.initialize('f640b178-9bcb-44e1-b3c9-d347c4c080cc');
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
  <script src="https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+
 
 
 
@@ -33,11 +33,22 @@ Gimbal2.initialize('f640b178-9bcb-44e1-b3c9-d347c4c080cc');
 
 <br>
 
-{{data}}
- <button ng-click="AddNumbers()">hello</button>
-  <button ng-click="save()">Save</button>
-   <button ng-click="retrieve()">get</button>
-      <button ng-click="clear()">clear</button>
+{{data}} <br>
+
+ Metrics :
+
+<table border=1>
+<tr><td>Name</td><td>Visited ?</td></tr>
+<tr ng-repeat="det in details">
+  <td> {{det.name}} </td> <td> <div ng-if="det.visited">Completed</div><div ng-if="det.visited == false">Pending</div> </td>
+</tr>
+</table>
+
+<button ng-click="AddNumbers()">hello</button>
+<button ng-click="save()">Save</button>
+<button ng-click="retrieve()">get</button>
+<button ng-click="clear()">clear</button>
+<button ng-click="getMetrics()">Metrics</button>
 </div>
 
 <script>
@@ -46,10 +57,30 @@ var app = angular.module('myApp', [ 'ngStorage']);
 app.controller('myCtrl', function($scope,storageService) {
 
 	  
-     $scope.AddNumbers = function() {
-            var a = Number($scope.txt1 || 0);
-            var b = Number($scope.txt2 || 0);
-            $scope.sum = a+b;
+     $scope.getMetrics = function() {
+
+		var metrics  = [{"name":"Hall1","id":"beacon1","visited":false},{"name":"Hall 2","id":"beacon2","visited":false}];
+
+		var visited =  JSON.parse(storageService.get('locator'));
+		
+				angular.forEach(visited, function(data)
+				{
+
+					angular.forEach(metrics, function(data1)
+					{
+		
+						if(data.text === data1.id)
+						{	
+							data1.visited = true;
+		
+						}
+					
+					});
+					
+				
+				});
+
+            $scope.details = metrics;
         }
 		
 		$scope.saved = storageService.get('locator');
@@ -60,7 +91,7 @@ app.controller('myCtrl', function($scope,storageService) {
 		
 		var locArr = $scope.locator;
 
-			var blnStatus = false;
+		var blnStatus = false;
 		angular.forEach(locArr, function(data)
 		{
 				if(data.text === $scope.txt1){
@@ -89,7 +120,8 @@ app.controller('myCtrl', function($scope,storageService) {
 			angular.forEach($scope.locator, function(data){
 				count+= data.text ;//? 0 : 1;
 			});
-			$scope.data = count;
+//			$scope.data = count;
+$scope.data = storageService.get('locator');
 
 	
 
