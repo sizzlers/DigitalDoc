@@ -53,6 +53,12 @@
     "org.apache.cordova.device",
     "org.apache.cordova.console",
     "com.ionic.keyboard",
-    "https://github.com/happydenn/cordova-plugin-gimbal2.git"
+    "https://github.com/happydenn/cordova-plugin-gimbal2.git",
+    "https://github.com/katzer/cordova-plugin-local-notifications.git",
+    "plugins1/com.ezartech.ezar.videooverlay",
+    "plugins1/com.ezartech.ezar.snapshot",
+    "plugins1/cordova-plugin-device-orientation",
+    "plugins1/cordova-plugin-whitelist",
+    "https://github.com/nchutchind/cordova-plugin-app-launcher.git"
   ]
 }
