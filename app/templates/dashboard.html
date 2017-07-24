@@ -1,31 +1,51 @@
 <ion-view view-title="DigitalDocent" cache-view="true">
     <ion-content >
-        <div>
-          <button   class="button button-stable"
-                    ng-click="go.locator()">
-                Locator
-            </button>
-            <br>
-            <button   class="button button-stable"
-                      ng-click="go.ar()">
-                  AR
-              </button>
-              <br>
-              <button   class="button button-stable"
-                        ng-click="go.selfie()">
-                    Selfie
-                </button>
-                <br>
-                <button   class="button button-stable"
-                          ng-click="go.video()">
-                      Location Video
-                  </button>
 
-        </div>
+      <div class="">
+
+          <!--MAIN CONTENT SECTION START-->
+          <div class="row margin-vert-zeropadding-vert-zero margin-top-medium">
+              <div class="column  padding-vert-zero">
+      		   <div class=" large-6 text-center center">
+
+      			        <div class=" large-3" ng-repeat="menu in dashboard.menus track by $index" >
+                      <div class="row" ng-if="$even" ng-show="menu.canShow">
+                          <div class="col col-50" ng-if="dashboard.menus[$index]" >
+                          <a href='#' ng-click="dashboard.go('{{dashboard.menus[$index].menuState}}')">	<img ng-src="{{dashboard.menus[$index].menuImg}}" alt="logo">
+               						<div class="font-15 text-black bold margin-top-micro" >{{dashboard.menus[$index].menuName}}</div></a>
+                        </div>
+
+                        <div class="col col-50" ng-if="dashboard.menus[$index+1]" >
+                        <a href='#' ng-click="dashboard.go('{{dashboard.menus[$index+1].menuState}}')">	<img ng-src="{{dashboard.menus[$index+1].menuImg}}" alt="logo">
+                        <div class="font-15 text-black bold margin-top-micro" >{{dashboard.menus[$index+1].menuName}}</div></a>
+                      </div>
+
+                    </div>
+                  </div>
+      					<!--<div class="column tiny-6 large-3">
+      					 <a href='#' ng-click="go.locator()">	<img src="Images/logo-icon.png" alt="logo"></a>
+      						<div class="font-15 text-black bold margin-top-micro" >Locator</div>
+      				    </div>
+      					<div class="column tiny-6 large-3">
+      						<a href='#' ng-click="go.ar()">	<img src="Images/logo-icon.png" alt="logo"></a>
+      						<div class="font-15 text-black bold margin-top-micro">AR</div>
+      				    </div>
+      					<div class="column tiny-6 large-3 tiny-margin-top-large large-margin-top-zero">
+      						<a href='#' ng-click="go.selfie()">	<img src="Images/logo-icon.png" alt="logo"></a>
+      			   <div class="font-15 text-black bold margin-top-micro">Virtual Selfie</div>
+      				    </div>
+      					<div class="column tiny-6 large-3 tiny-margin-top-large large-margin-top-zero">
+      						<a href='#' ng-click="go.video()">	<img src="Images/logo-icon.png" alt="logo"></a>
+      			   <div class="font-15 text-black bold margin-top-micro">Virtual Interview</div>
+             </div>-->
+
+                  </div>
+              </div>
+      	</div>
+      </div>
+
+
     </ion-content>
-    <ion-footer-bar  class="bar-light" >
-      Footer
-    </ion-footer-bar>
 
 
 </ion-view>

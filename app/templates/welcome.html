@@ -1,0 +1,30 @@
+<ion-view hide-nav-bar="true">
+    <ion-content class="welcomebody has-header">
+      <body>
+      <div class="">
+
+          <!--MAIN CONTENT SECTION START-->
+          <div class="row margin-vert-zeropadding-vert-zero margin-top-xlarge">
+              <div class="column tiny-12 padding-vert-zero">
+      		   <div class="tiny-12 large-4 text-center center">
+      			   <img class="welcomelogo "src="images/logo.png" alt="logo">
+      			   <div class="font-36 text-white bold margin-top-small">Welcome</div>
+      			    <div class=" margin-vert-zero padding-vert-zero margin-top-medium">
+      					<div class=" welcomecontent ">
+      						<input type="text" placeholder="  Name"  ng-model="register.name">
+      				  </div>
+      					<div class="welcomecontent " ng-disable="register.name === ''">
+      						<a class="button bg-grey-1" ng-click="register.save()"> Submit</a>
+      				    </div>
+      			   </div>
+                  </div>
+              </div>
+      	</div>
+      </div>
+      <body>
+
+    </ion-content>
+
+
+
+</ion-view>

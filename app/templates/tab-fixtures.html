@@ -1,6 +1,22 @@
-<ion-view view-title="Fixtures">
+<ion-view view-title="Fixtures" >
   <ion-content class="padding">
     <h2>Match Fixtures</h2>
+
+    <div class="row">
+      <div class= "col gridheader"> Place</div>
+      <div class= "col col-25 gridheader"> Date</div>
+      <div class= "col col-33 gridheader"> Opponent</div>
+      <div class= "col gridheader"> Goals</div>
+      <div class= "col gridheader"> Status</div>
+    </div>
+
+    <div class="row" ng-repeat="fixture in fixtures track by $index" ng-class="{'evenrowcolor': $index % 2 === 0, 'oddrowcolor': $index % 2 !== 0}">
+      <div class= "col"> {{fixture.place}}</div>
+      <div class= "col col-25"> {{fixture.date}}</div>
+      <div class= "col col-33"> {{fixture.opponent}}</div>
+      <div class= "col"> {{fixture.goals}}</div>
+      <div class= "col"> {{fixture.status}}</div>
+    </div>
 
   </ion-content>
 </ion-view>

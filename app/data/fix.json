@@ -1,0 +1,109 @@
+{
+  "fixtures": [
+        {
+          "date": "15/09/2016",
+          "opponent": "Feyenoord",
+          "goals": "1-0",
+          "status": "Lost",
+          "place": "Away"
+        },
+        {
+          "date": "29/09/2016",
+          "opponent": "Zorya Luhansk",
+          "goals": "1-0",
+          "status": "Won",
+          "place": "Home"
+        },
+		{
+          "date": "20/10/2016",
+          "opponent": "Fenerbahçe",
+          "goals": "4-1",
+          "status": "Won",
+          "place": "Home"
+        },
+		{
+          "date": "03/11/2016",
+          "opponent": "Fenerbahçe",
+          "goals": "2-1",
+          "status": "Lost",
+          "place": "Away"
+        },
+		{
+          "date": "24/11/2016",
+          "opponent": "Feyenoord",
+          "goals": "4-0",
+          "status": "Won",
+          "place": "Home"
+        },
+		{
+          "date": "08/11/2016",
+          "opponent": "Zorya Luhansk",
+          "goals": "2-0",
+          "status": "Won",
+          "place": "Away"
+        },
+		{
+          "date": "16/01/2017",
+          "opponent": "Saint-Étienne",
+          "goals": "3-0",
+          "status": "Won",
+          "place": "Home"
+        },
+		{
+          "date": "22/02/2017",
+          "opponent": "Saint-Étienne",
+          "goals": "1-0",
+          "status": "Won",
+          "place": "Away"
+        },
+		{
+          "date": "09/03/2017",
+          "opponent": "Rostov",
+          "goals": "1-1",
+          "status": "Draw",
+          "place": "Away"
+        },
+		{
+          "date": "16/03/2017",
+          "opponent": "Rostov",
+          "goals": "1-0",
+          "status": "Won",
+          "place": "Home"
+        },
+		{
+          "date": "13/04/2017",
+          "opponent": "Anderlecht",
+          "goals": "1-1",
+          "status": "Draw",
+          "place": "Away"
+        },
+		{
+          "date": "20/04/2017",
+          "opponent": "Anderlecht",
+          "goals": "1-0",
+          "status": "Won",
+          "place": "Home"
+        },
+		{
+          "date": "04/05/2017",
+          "opponent": "Celta Vigo",
+          "goals": "1-0",
+          "status": "Won",
+          "place": "Away"
+        },
+		{
+          "date": "11/05/2017",
+          "opponent": "Celta Vigo",
+          "goals": "1-1",
+          "status": "Draw",
+          "place": "Home"
+        },
+		{
+          "date": "24/05/2017",
+          "opponent": "Ajax",
+          "goals": "0-2",
+          "status": "Won",
+          "place": "Away"
+        }
+    ]
+}

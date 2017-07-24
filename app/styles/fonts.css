@@ -1,0 +1,22 @@
+/*
+  This CSS resource incorporates links to font software which is the valuable copyrighted
+  property of Monotype Imaging and/or its suppliers. You may not attempt to copy, install,
+  redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+  Imaging with any questions regarding Web Fonts:  http://www.fonts.com
+*/
+
+/* regular */
+
+@font-face {
+    font-family: "BrandFont";
+    font-style: normal;
+    font-weight: normal;
+    src: url('./fonts/neue-haas-grotesk/NeueHaasGroteskText55Roman.ttf') format('truetype'),url("./fonts/neue-haas-grotesk/NeueHaasGroteskText55Roman.woff2") format("woff2"), url("../../fonts/neue-haas-grotesk/NeueHaasGroteskText55Roman.woff") format("woff");
+}
+
+@font-face {
+    font-family: "BrandFont";
+    font-style: normal;
+    font-weight: bold;
+    src: url('./fonts/neue-haas-grotesk/NeueHaasGroteskText75Bold.ttf') format('truetype'),url("./fonts/neue-haas-grotesk/NeueHaasGroteskText75Bold.woff2") format("woff2"), url("../../fonts/neue-haas-grotesk/NeueHaasGroteskText75Bold.woff") format("woff");
+}

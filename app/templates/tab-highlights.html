@@ -1,5 +1,17 @@
 <ion-view view-title="Highlights">
   <ion-content>
-    Highlights
+    <div id="Videos" class="tabcontent">
+
+      <div class="" ng-repeat="video in videos track by $index" >
+        <div class="videoheader videobox">Man United Vs {{video.opponent}}</div>
+        <div class="videoopponent videobox">{{video.name}}</div>
+
+        <iframe  class="videoframe" ng-src="{{video.url}}">
+        </iframe>
+
+      </div>
+
+    </div>
+
   </ion-content>
 </ion-view>

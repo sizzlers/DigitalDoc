@@ -5,9 +5,10 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ngLodash'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'starter.values', 'starter.constants', 'ngLodash', 'ngCordova'])
 
-.run(function($ionicPlatform, $window, BeaconManagerService) {
+.run(function($ionicPlatform, $state, $window, BeaconManagerService, MenuService,  LocationBeaconService,
+                beaconValue, beaconsConstant, $rootScope, RegistrationService, menuValue, menuConstant) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -20,16 +21,33 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-
-    Gimbal2.initialize('f640b178-9bcb-44e1-b3c9-d347c4c080cc');
+        beaconValue.visitedBeaconsValue = beaconsConstant.beacons;
+        menuValue.menus = menuConstant.menus;
+        Gimbal2.initialize('f640b178-9bcb-44e1-b3c9-d347c4c080cc');
 
         Gimbal2.startBeaconManager();
         console.log('beaconManager started');
         angular.element($window).on('beaconsighting', function(data){
             console.log('Beaconsighting: ', data);
             BeaconManagerService.storeVisitedBeacons(data);
+            LocationBeaconService.notifyUser(data);
+            MenuService.updateMenu(data);
       });
+
+
+      $rootScope.$on('$cordovaLocalNotification:click',
+        function (event, notification, state) {
+          console.log(JSON.stringify(notification));
+          LocationBeaconService.handleNotification(notification);
+        });
   });
+
+  /*if(RegistrationService.getUser()){
+    $state.go('dashboard');
+  }else{
+    $state.go('welcome');
+  }*/
+
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
@@ -90,9 +108,27 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     templateUrl: 'templates/locator.html',
     controller : 'LocatorController',
 
+  })
+  .state('ar', {
+    url: '/ar',
+    templateUrl: 'templates/ar.html',
+    controller : 'ArController',
+
+  })
+  .state('selfie', {
+    url: '/selfie',
+    templateUrl: 'templates/selfie.html',
+    controller : 'SelfieController',
+
+  })
+  .state('welcome', {
+    url: '/welcome',
+    templateUrl: 'templates/welcome.html',
+    controller : 'WelcomeController',
+
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/dashboard');
+  $urlRouterProvider.otherwise('/welcome');
 
 });

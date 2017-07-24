@@ -15,14 +15,19 @@
           .catch(err => console.log('Error', err));
       }
     </script>-->
-
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/ionic/release/css/ionic.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <link href="styles/style.css" rel="stylesheet">
-
+    <link href="styles/vzrf.css" rel="stylesheet">
+    <link href="styles/app.css" rel="stylesheet">
+    <link href="styles/fonts.css" rel="stylesheet">
+    <link href="styles/vzrf-blessed1.css" rel="stylesheet">
+    <link href="styles/vzrf-blessed2.css" rel="stylesheet">
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="styles/ionic.app.css" rel="stylesheet">
     -->
@@ -44,27 +49,35 @@
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
+
+
     <!-- your app's js -->
     <!-- build:js scripts/scripts.js -->
     <script src="scripts/app.js"></script>
+    <script src="scripts/beacons.value.js"></script>
+    <script src="scripts/beacons.constant.js"></script>
     <script src="scripts/controllers.js"></script>
     <script src="scripts/services.js"></script>
     <script src="scripts/configuration.js"></script>
     <!-- endbuild -->
+
   </head>
   <body ng-app="starter">
     <!--
       The nav bar that will be updated as we navigate between views.
     -->
-    <ion-nav-bar class="bar-stable">
-      <ion-nav-back-button>
-      </ion-nav-back-button>
-    </ion-nav-bar>
+    <ion-pane>
+    <ion-header-bar class="header bar bar-header"  >
+      <a href="#/dashboard" ><img class="headerhome" src="images/home.png" /> </a>
+    <h1 class=" headertitle title title-center" > Digital Docent</h1>
+
+</ion-header-bar>
     <!--
       The views will be rendered in the <ion-nav-view> directive below
       Templates are in the /templates folder (but you could also
       have templates inline in this html file if you'd like).
     -->
     <ion-nav-view></ion-nav-view>
+
   </body>
 </html>
