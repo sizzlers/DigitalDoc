@@ -1,6 +1,6 @@
-<ion-view view-title="Locator" >
-    <ion-content >
-      <!--<input type="text"  ng-model="txt1"> <br>
+<ion-view view-title="Locator">
+  <ion-content>
+    <!--<input type="text"  ng-model="txt1"> <br>
       <input type="text"  ng-model="txt2"><br>
 
       <br>
@@ -11,34 +11,34 @@
          <button ng-click="retrieve()">get</button>
             <button ng-click="clear()">clear</button>-->
 
-            <!--<button ng-click="save()">Save</button>-->
-            <button ng-click="clear()">clear</button>
+    <!--<button ng-click="save()">Save</button>-->
+    <button ng-click="clear()">clear</button>
 
-            <div class="visitedguide">
-                <div class="parentvisited" >
-                  <span > Visited </span>
-                  <div class="visitedbox"> </div>
-                </div>
-                <div class="parentvisited" >
-                  <span > Not Visited </span>
-                  <div class="notvisitedbox"> </div>
-                </div>
-            </div>
+    <div class="visitedguide">
+      <div class="parentvisited">
+        <span> Visited </span>
+        <div class="visitedbox"> </div>
+      </div>
+      <div class="parentvisited">
+        <span> Not Visited </span>
+        <div class="notvisitedbox"> </div>
+      </div>
+    </div>
 
 
-              <div class="grandparent">
-                  <div class="parent" ng-repeat="beacon in locator.visitedBeacons track by $index " ng-if="$even">
-                      <div class="col col-50 child-left" ng-class="{'gcolor': !locator.visitedBeacons[$index].visited, 'greencolor': locator.visitedBeacons[$index].visited}">
-                    {{locator.visitedBeacons[$index].beaconName}}</div>
-                    <div class="col col-50 child-right" ng-class="{'gcolor': !locator.visitedBeacons[$index+1].visited, 'greencolor': locator.visitedBeacons[$index+1].visited}">
-                  {{locator.visitedBeacons[$index+1].beaconName}}</div>
-                  </div>
+    <div class="grandparent">
+      <div class="parent" ng-repeat="beacon in locator.visitedBeacons track by $index " ng-if="$even">
+        <div class="col col-50 child-left" ng-class="{'gcolor': !locator.visitedBeacons[$index].visited, 'greencolor': locator.visitedBeacons[$index].visited}">
+          {{locator.visitedBeacons[$index].beaconName}}</div>
+        <div class="col col-50 child-right" ng-class="{'gcolor': !locator.visitedBeacons[$index+1].visited, 'greencolor': locator.visitedBeacons[$index+1].visited}">
+          {{locator.visitedBeacons[$index+1].beaconName}}</div>
+      </div>
 
-                  <div class="locatorstadium">
-                    <img class="locatorstadiumimg" src="images/ground.png" />
-                  </div>
-              <div>
-    </ion-content>
+      <div class="locatorstadium">
+        <img class="locatorstadiumimg" src="images/ground.png" />
+      </div>
+      <div>
+  </ion-content>
 
 
 

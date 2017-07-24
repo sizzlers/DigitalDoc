@@ -3,18 +3,18 @@
     <h2>Players</h2>
 
     <div class="row">
-      <div class= "col col-50 gridheader"> Name</div>
-      <div class= "col gridheader"> Goals</div>
-      <div class= "col gridheader"> Shots on target</div>
-      <div class= "col gridheader"> Assists</div>
+      <div class="col col-50 gridheader"> Name</div>
+      <div class="col gridheader"> Goals</div>
+      <div class="col gridheader"> Shots on target</div>
+      <div class="col gridheader"> Assists</div>
 
     </div>
 
     <div class="row" ng-repeat="player in players track by $index" ng-class="{'evenrowcolor': $index % 2 === 0, 'oddrowcolor': $index % 2 !== 0}">
-      <div class= "col col-50"> {{player.name}}</div>
-      <div class= "col "> {{player.goals}}</div>
-      <div class= "col "> {{player.Shotsontarget}}</div>
-      <div class= "col"> {{player.Assists}}</div>
+      <div class="col col-50"> {{player.name}}</div>
+      <div class="col "> {{player.goals}}</div>
+      <div class="col "> {{player.Shotsontarget}}</div>
+      <div class="col"> {{player.Assists}}</div>
     </div>
 
   </ion-content>
