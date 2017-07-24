@@ -17,6 +17,12 @@ Gimbal2.initialize('f640b178-9bcb-44e1-b3c9-d347c4c080cc');
 
 
 
+
+      window.plugins.launcher.launch({packageName:'com.ezartech.demo.ezarcompass'}, successCallback, errorCallback);
+
+
+
+
 <html>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -56,39 +62,39 @@ var app = angular.module('myApp', [ 'ngStorage']);
 
 app.controller('myCtrl', function($scope,storageService) {
 
-	  
+
      $scope.getMetrics = function() {
 
 		var metrics  = [{"name":"Hall1","id":"beacon1","visited":false},{"name":"Hall 2","id":"beacon2","visited":false}];
 
 		var visited =  JSON.parse(storageService.get('locator'));
-		
+
 				angular.forEach(visited, function(data)
 				{
 
 					angular.forEach(metrics, function(data1)
 					{
-		
+
 						if(data.text === data1.id)
-						{	
+						{
 							data1.visited = true;
-		
+
 						}
-					
+
 					});
-					
-				
+
+
 				});
 
             $scope.details = metrics;
         }
-		
+
 		$scope.saved = storageService.get('locator');
 		$scope.locator = (storageService.get('locator')!==null) ? JSON.parse($scope.saved) : [ {text: 'test', visited: false}];
 		storageService.set('locator', JSON.stringify($scope.locator));
-		
+
 		$scope.save = function() {
-		
+
 		var locArr = $scope.locator;
 
 		var blnStatus = false;
@@ -96,7 +102,7 @@ app.controller('myCtrl', function($scope,storageService) {
 		{
 				if(data.text === $scope.txt1){
 					   blnStatus = true;
-					   
+
 				}
 		});
 
@@ -107,9 +113,9 @@ app.controller('myCtrl', function($scope,storageService) {
 						visited: true
 						});
 				}
-		
-				
-		
+
+
+
 		storageService.set('locator', JSON.stringify($scope.locator));
 
         }
@@ -123,13 +129,13 @@ app.controller('myCtrl', function($scope,storageService) {
 //			$scope.data = count;
 $scope.data = storageService.get('locator');
 
-	
+
 
         }
 		$scope.clear = function() {
-        
+
 			//$scope.data = storageService.get('1')
-		
+
 			 storageService.remove();
 
         }

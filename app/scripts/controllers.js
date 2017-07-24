@@ -190,12 +190,7 @@ angular.module('starter.controllers', [])
   $scope.dashboard = {
 
     go: function(state) {
-      if(state && state !== 'selfie'){
         $state.go(state);
-      }
-      else if(state === 'selfie') {
-        window.plugins.launcher.launch({packageName:'com.ezartech.demo.ezarcompass'}, successCallback, errorCallback);
-      }
     },
     menus: menuValue.menus,
     video : function() {
