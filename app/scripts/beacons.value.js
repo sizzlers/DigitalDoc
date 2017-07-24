@@ -1,12 +1,10 @@
-
-
 angular.module('starter.values', [])
 
   .value('beaconValue', {
-        visitedBeaconsValue: []
+    visitedBeaconsValue: []
 
-})
+  })
   .value('menuValue', {
-            menus: []
+    menus: []
 
-});
+  });
