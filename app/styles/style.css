@@ -1,23 +1,27 @@
 /* Empty. Add your own CSS if you like */
+
 .gcolor {
-    background-color: #CCCCCC;
-    color: white;
+  background-color: #CCCCCC;
+  color: white;
 }
+
 .greencolor {
-    background-color: #42B1CA;
-    color: white;
+  background-color: #42B1CA;
+  color: white;
 }
 
 .header {
   background-color: #FDBA4B !important;
   border: 0px;
 }
-.headertitle{
+
+.headertitle {
   color: white;
   font-weight: bolder !important;
   font-family: sans-serif;
   font-size: 24px !important;
 }
+
 .headerhome {
   height: 35px;
   width: 35px;
@@ -27,237 +31,237 @@
 .welcomebody {
   background-color: #FDBA4B !important;
 }
+
 .centre {
   float: none;
   margin-left: auto;
   margin-right: auto;
 }
 
-.section1,
-.section2 {
+.section1, .section2 {
   height: 100%;
   width: 100%;
   overflow: auto;
 }
-.gridheader{
+
+.gridheader {
   font-style: italic;
   font-family: sans-serif;
   font-weight: bold;
-
 }
-.videobox{
+
+.videobox {
   width: 92%;
-  margin-left:  4%;
-  margin-right:  4%;
-  margin-right:  4%;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-right: 4%;
 }
-.videoframe{
-  height:225px;
+
+.videoframe {
+  height: 225px;
   width: 92%;
-  margin-left:  4%;
-  margin-right:  4%;
-
+  margin-left: 4%;
+  margin-right: 4%;
 }
 
-.videoheader{
+.videoheader {
   font-style: italic;
   font-family: sans-serif;
   font-weight: bold;
-  font-size:25px;
-}
-.videoopponent{
-  font-style: italic;
-  font-family: sans-serif;
-  font-size:17px;
+  font-size: 25px;
 }
 
-.oddrowcolor{
+.videoopponent {
+  font-style: italic;
+  font-family: sans-serif;
+  font-size: 17px;
+}
+
+.oddrowcolor {
   background-color: #99DEF7;
 }
+
 .evenrowcolor {
-    background-color: #EDEDED;
+  background-color: #EDEDED;
 }
-.welcomelogo{
+
+.welcomelogo {
   width: 160px;
   height: 120px;
 }
 
-.welcomecontent{
+.welcomecontent {
   margin: 4%;
   width: 92%;
-
 }
 
-
-
-
-
-
-
-
-
 * {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
 body {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .viewphoto {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
-.ezar {
-}
+.ezar {}
 
 .bar.ezar {
-    opacity: 0.45;
+  opacity: 0.45;
 }
 
 .compass-outer {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
+
 /* Portrait layout (default) */
+
 .compass-content {
-    display: table-cell;
-    vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .compass-heading {
-    margin-left: auto;
-    margin-right: auto;
-    width: 240px;
-    height: 240px;
-    line-height: 238px;
-    font-size: 120px;
-    text-align: center;
-    position: relative;
-    border-radius: 20px;
-   /* border: 3px solid rgb(255, 213, 0);
+  margin-left: auto;
+  margin-right: auto;
+  width: 240px;
+  height: 240px;
+  line-height: 238px;
+  font-size: 120px;
+  text-align: center;
+  position: relative;
+  border-radius: 20px;
+  /* border: 3px solid rgb(255, 213, 0);
     background-color: rgba(32, 32, 32, 0.5);
      z-index: 80; */
 }
 
 .compass-heading #heading {
-    color: rgb(255, 213, 0);
-    /* z-index: 100; */
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  color: rgb(255, 213, 0);
+  /* z-index: 100; */
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .compass-heading #heading .degrees {
-    font-size: 50%;
-    vertical-align: text-top;
-    line-height: 100px;
+  font-size: 50%;
+  vertical-align: text-top;
+  line-height: 100px;
 }
 
 .compass-heading .forward-arrow {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    left: 0px;
-    /* z-index: 90; */
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0px;
+  /* z-index: 90; */
 }
 
 .compass-star {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 
 .top-right-corner {
-    position: absolute;
-    right: 10px;
-    top: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .snap {
-    position: absolute;
-    right: 31px;
-    bottom: 26px;
+  position: absolute;
+  right: 31px;
+  bottom: 26px;
 }
 
 .attributing {
-    color: rgb(255, 213, 0);
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
+  color: rgb(255, 213, 0);
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
 }
 
 .grandparent {
-    overflow: hidden;
-    position: relative;
-    width: 96%;
-    margin: 2%;
-    max-height:600px;
+  overflow: hidden;
+  position: relative;
+  width: 96%;
+  margin: 2%;
+  max-height: 600px;
 }
 
 .parent {
-    position:relative;
-    width: 100%;
-    min-height:200px;
-    float: left !important;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  float: left !important;
 }
 
 .child-left {
-   width: 49%;
-   height: 98%;
-   position: absolute;
-   margin-right: 1% ;
-   margin-bottom: 2%;
-   border-radius: 10px;
+  width: 49%;
+  height: 98%;
+  position: absolute;
+  margin-right: 1%;
+  margin-bottom: 2%;
+  border-radius: 10px;
 }
 
 .child-right {
-    height: 98%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 49%;
-    margin-left: 1% ;
-    margin-bottom: 2%;
-    border-radius: 10px;
+  height: 98%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 49%;
+  margin-left: 1%;
+  margin-bottom: 2%;
+  border-radius: 10px;
 }
 
-.locatorstadium{
-  position:absolute;
-  left:0;
-  top:0;
-  margin-left:10%;
-  margin-top:10%;
-  width:80%;
+.locatorstadium {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 10%;
+  margin-top: 10%;
+  width: 80%;
   height: 80%;
-  z-index:5;
+  z-index: 5;
 }
-.locatorstadiumimg{
-  width:100%;
+
+.locatorstadiumimg {
+  width: 100%;
   height: 100%;
 }
+
 video {
-	transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 
 canvas {
-	transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 
-.visitedguide{
+.visitedguide {
   margin-right: 5px;
   float: right;
-
 }
-.visitedbox{
+
+.visitedbox {
   width: 15px;
-  height:15px;
+  height: 15px;
   background-color: #42B1CA;
 }
-.notvisitedbox{
+
+.notvisitedbox {
   width: 15px;
-  height:15px;
+  height: 15px;
   background-color: #CCCCCC;
 }
