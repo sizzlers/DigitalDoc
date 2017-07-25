@@ -15,9 +15,11 @@ Note : As its an Cordova –Ionic(Hybrid mobile app) we can build it for both An
 Development setup and building android installation file (apk):
 1. Install NodeJS
 2. npm install -g for all the below components
+
    Ionic
    Cordova
    Grunt
+   
 3. Clone the app to your machine
 4. Goto project root directory
     npm install
