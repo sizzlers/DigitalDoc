@@ -24,8 +24,12 @@ Development setup and building android installation file (apk):
    
 3. Clone the app to your machine
 4. Goto project root directory
+
     npm install
+    
     bower install
+    
 5. Corodova platform add android
+
 6. grunt build:android  -- for building it for android
 
