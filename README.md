@@ -1,4 +1,4 @@
-# DigitalDoc
+# DigitalDocent
 
 Video and Demo Url of Digital Docent Mobile Application
 
