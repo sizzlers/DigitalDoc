@@ -17,7 +17,9 @@ Development setup and building android installation file (apk):
 2. npm install -g for all the below components
 
    Ionic
+   
    Cordova
+   
    Grunt
    
 3. Clone the app to your machine
