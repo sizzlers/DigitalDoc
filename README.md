@@ -28,8 +28,16 @@ Development setup and building android installation file (apk):
     npm install
     
     bower install
-    
+ 
 5. Corodova platform add android
 
-6. grunt build:android  -- for building it for android
+6.  Add the below cordova  plugins
+
+     cordova plugin add https://github.com/happydenn/cordova-plugin-gimbal2.git
+     
+     cordova plugin add com.ezartech.ezar.videoOverlay
+     
+     cordova plugin add com.ezartech.ezar.snapshot
+          
+7. grunt build:android  -- for building it for android
 
